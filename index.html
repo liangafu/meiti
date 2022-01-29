@@ -84,8 +84,11 @@
 				      </el-table-column>
 				      <el-table-column
 				        prop="url"
-				        label="案例"
+				        label="案例" 
 				        min-width="580">
+						 <template scope="scope">
+						   <a :href="scope.row.url" target="_blank" style="text-decoration:none;">{{scope.row.url}}</a>
+						</template>
 				      </el-table-column>
 				      <el-table-column
 				        prop="price"
@@ -116,6 +119,9 @@
 			        prop="url"
 			        label="案例"
 			        min-width="580">
+					<template scope="scope">
+					   <a :href="scope.row.url" target="_blank" style="text-decoration:none;">{{scope.row.url}}</a>
+					</template>
 			      </el-table-column>
 			      <el-table-column
 			        prop="price"
@@ -146,6 +152,9 @@
 			        prop="url"
 			        label="案例"
 			        min-width="580">
+					<template scope="scope">
+					   <a :href="scope.row.url" target="_blank" style="text-decoration:none;">{{scope.row.url}}</a>
+					</template>
 			      </el-table-column>
 			      <el-table-column
 			        prop="price"
@@ -202,11 +211,11 @@
 				    count: 0,
 					baimingdan: [
 							{name: '人民网',
-					          url: 'http://bj.people.com.cn/n2/2019/0521/c82838-32963442.html',
+					          url: 'http://www.people.com.cn/',
 					          price: 200333,
 					        },
 							{name: '新华网',
-							  url: 'http://www.xinhuanet.com/money/2020-04/26/c_1125907404.html',
+							  url: 'http://www.xinhuanet.com/',
 							  price: 200333,
 							},
 							{name: '央视网',
@@ -495,7 +504,7 @@
 							],
 					zimeiti: [{
 					         
-					          name: '中国网',
+					          name: '搜狐网',
 					          url: '上海市普陀区金沙江路 1518 弄',
 					          price: 200333,
 					        },
@@ -509,7 +518,8 @@
 	        },
 			 indexMethod(index) {
 			        return index * 1;
-			      }
+			      },
+			
 	      }
     })
   </script>
